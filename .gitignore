@@ -1,0 +1,9 @@
+## Terraform 
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+backend.hcl
+*.pkrvars
+debug.tf
+*.lock.hcl
+*.DS_STORE
