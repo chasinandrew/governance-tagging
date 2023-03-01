@@ -8,6 +8,5 @@ terraform {
   }
 }
 provider "google" {
-  project = var.project_id
   credentials = "/Users/andrewchasin/Documents/service-account-keys/tagging-project-378519-021a361dc396.json"
 }
