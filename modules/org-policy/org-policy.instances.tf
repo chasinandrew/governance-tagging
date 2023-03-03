@@ -6,18 +6,12 @@ locals {
         #Rule 1
         {
           enforcement = true
-          allow = [
-            #"C031ncvr9", # Identity Workspace for prod hcahealthcare.com
-            #"C030fgx8u", # Identity workspace for Cerecore
-            "is:C00pdrxjk", # Identity Workspace ID for hcaqa.corpadqa.net
-            "is:C030fgx8u"  # Identity Workspace for Wiz.io scanning tool
-          ]
-        #   deny = []
+          allow = [var.allowed_customer_ids]
           conditions = []
-          }, {
+          },
+           {
           enforcement = true
           allow       = []
-        #   deny = []
           conditions = [{
             title       = "Project tags for excluding from this Organization Policy."
             description = "Any project matching this expression will be EXCLUDED from the iam.allowedPolicyMemberDomain organization constraint."
